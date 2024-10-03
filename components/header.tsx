@@ -2,6 +2,7 @@ import Link from "next/link";
 import Cart from "./cart";
 import Logo from "./logo";
 import { Button } from "./ui/button";
+import { ttRunsMedium, ttRunsRegular } from "@/app/font";
 
 export default function Header() {
   const menuItems: Array<{ label: string; href: string }> = [
@@ -24,7 +25,7 @@ export default function Header() {
               <li key={index} className="nav-item mr-[24px]">
                 <Link
                   href={menuItem.href}
-                  className="nav-link text-[16px] text-[#313762] font-semibold rounded-md hover:text-[#515aa0] duration-200"
+                  className={`nav-link text-[16px] ${ttRunsMedium.variable} text-[#313762] font-semibold rounded-md hover:text-[#515aa0] duration-200`}
                 >
                   {menuItem.label}
                 </Link>

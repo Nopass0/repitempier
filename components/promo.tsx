@@ -14,24 +14,18 @@ export default function Promo({ className }: { className?: string }) {
       const start = new Date(); // Текущее время
       start.setHours(23, 59, 0);
 
-      const end = new Date(
-        start.getFullYear(),
-        start.getMonth(),
-        start.getDate() + 1,
-        23,
-        59,
-        0
-      );
-      const diff = end.getTime() - start.getTime();
-      const hours = Math.floor(diff / 3600000);
-      const minutes = Math.floor((diff % 3600000) / 60000);
+      // Уменьшаем время на 1 минуту
+      start.setMinutes(start.getMinutes() - 1);
+
+      const hours = start.getHours();
+      const minutes = start.getMinutes();
 
       setTimer(
         `${hours.toString().padStart(2, "0")}:${minutes
           .toString()
           .padStart(2, "0")}`
       );
-    }, 1000);
+    }, 60000); // Изменено на 60000 мс (1 минута)
     return () => clearInterval(intervalId);
   }, []);
 
@@ -159,9 +153,9 @@ export default function Promo({ className }: { className?: string }) {
         <path
           d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
           stroke="#FCFCFC"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>
