@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button } from '@shadcn/ui';
+import { Button } from '../ui/Button';
 import { Lucide } from 'lucide-react';
 import { HiOutlineExternalLink } from 'lucide-react';
 
