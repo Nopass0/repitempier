@@ -1,34 +1,23 @@
-import * as React from 'react';
-import { Button } from '@/components/ui/Button';
-import { Lucide } from 'lucide-react';
-import { HiOutlineExternalLink } from 'lucide-react';
+import React from 'react';
+import { LucideIcon } from 'lucide-react'; // Assuming you want to use a specific icon from lucide-react
+import { Button } from '@/components/ui/button'; // Example of importing a shadcn/ui component
+import 'tailwindcss/tailwind.css'; // Ensure Tailwind CSS is imported
 
-interface Props {
+interface HelloWorldProps {
+  icon: LucideIcon;
+  message: string;
 }
 
-const helloWorld: React.FC<Props> = () => {
+const HelloWorld: React.FC<HelloWorldProps> = ({ icon: Icon, message }) => {
   return (
-    <div className="max-w-md mx-auto p-4 md:p-6 lg:p-8 bg-white rounded-lg shadow-md">
-      <h1 className="text-3xl font-bold mb-4">hello, world!</h1>
-      <p className="text-lg mb-4">this is a sample component using tailwind css, shadcn ui, and lucide react.</p>
-      <Button
-        variant="primary"
-        size="lg"
-        className="mb-4"
-      >
-        click me!
-      </Button>
-      <a
-        href="https://example.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600 hover:text-blue-800"
-      >
-        visit example.com
-        <HiOutlineExternalLink className="ml-2" />
-      </a>
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <div className="text-center">
+        <Icon size={48} className="mb-4 text-blue-500" />
+        <h1 className="text-2xl font-bold text-gray-800">{message}</h1>
+        <Button variant="outline" className="mt-4">Click Me</Button>
+      </div>
     </div>
   );
 };
 
-export default helloWorld;
+export default HelloWorld;
