@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,8 @@ import phone_mockup from "./static/phone_mock.png";
 import person1 from "./static/person1.png";
 import person2 from "./static/person2.png";
 import person3 from "./static/person3.png";
+import ContactFormSection from "@/components/contact-form-section";
+import PlatformFeatures from "@/components/platform-features";
 
 export default function Home() {
   //["Годовой курс", "Марафон", "Megaзабег"]
@@ -213,22 +216,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#6b40e9] py-16">
-        <div className="container mx-auto px-4">
-          <div className="bg-[#6b40e9] rounded-3xl p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">
-              Получите пробный урок на платформе бесплатно
-            </h2>
-            <p className="mb-6">
-              Начни с бесплатного пробного урока по любому предмету с реальными
-              заданиями на платформе
-            </p>
-            <Button className="bg-white text-[#6b40e9] hover:bg-gray-100 rounded-full px-6 py-3">
-              Получить пробный урок
-            </Button>
-          </div>
-        </div>
+      <section className="bg-[#FCFCFC] py-16">
+        <ContactFormSection variant="purple" />
       </section>
+      <PlatformFeatures />
     </div>
   );
 }
