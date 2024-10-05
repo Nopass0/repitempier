@@ -11,6 +11,7 @@ import person2 from "./static/person2.png";
 import person3 from "./static/person3.png";
 import ContactFormSection from "@/components/contact-form-section";
 import PlatformFeatures from "@/components/platform-features";
+import Repititors from "@/components/repititors";
 
 export default function Home() {
   //["Годовой курс", "Марафон", "Megaзабег"]
@@ -220,6 +221,8 @@ export default function Home() {
         <ContactFormSection variant="purple" />
       </section>
       <PlatformFeatures />
+      <section className="py-16 h-[943px] bg-[#7B3CFA]"></section>
+      <Repititors />
     </div>
   );
 }
