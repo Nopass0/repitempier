@@ -7,8 +7,8 @@ import { ttRunsMedium, ttRunsRegular } from "@/app/font";
 export default function Header() {
   const menuItems: Array<{ label: string; href: string }> = [
     { label: "Все курсы", href: "#" },
-    { label: "Репетиторы", href: "#" },
-    { label: "О компании", href: "#" },
+    { label: "Репетиторы", href: "product" },
+    { label: "О компании", href: "about" },
     { label: "Отзывы", href: "#" },
     { label: "Бесплатное", href: "#" },
   ];

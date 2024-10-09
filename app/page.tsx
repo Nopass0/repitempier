@@ -2,16 +2,19 @@
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
-import heroImage from "./static/hero.png";
+import heroImage from "@/app/static/hero.png";
 import { ArrowUpRight, ChevronDown, Star } from "lucide-react";
 import { ttRunsRegular } from "./font";
-import phone_mockup from "./static/phone_mock.png";
-import person1 from "./static/person1.png";
-import person2 from "./static/person2.png";
-import person3 from "./static/person3.png";
+import phone_mockup from "@/app/static/phone_mock.png";
+import person1 from "@/app/static/person1.png";
+import person2 from "@/app/static/person2.png";
+import person3 from "@/app/static/person3.png";
 import ContactFormSection from "@/components/contact-form-section";
 import PlatformFeatures from "@/components/platform-features";
 import Repititors from "@/components/repititors";
+import Reviews from "@/components/review";
+import VideoCarousel from "@/components/videos-carousel";
+import FAQ from "@/components/faq";
 
 export default function Home() {
   //["Годовой курс", "Марафон", "Megaзабег"]
@@ -93,6 +96,7 @@ export default function Home() {
           </div>
         </AspectRatio>
       </section>
+      {/* ! TODO: Сделать отдельный элемент  */}
       <section className="bg-[#f9f8f9] py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl flex flex-col font-bold mb-8">
@@ -223,6 +227,12 @@ export default function Home() {
       <PlatformFeatures />
       <section className="py-16 h-[943px] bg-[#7B3CFA]"></section>
       <Repititors />
+      <Reviews />
+      <VideoCarousel />
+      <FAQ />
+      <section className="bg-[#FCFCFC] py-16">
+        <ContactFormSection variant="pink" />
+      </section>
     </div>
   );
 }
