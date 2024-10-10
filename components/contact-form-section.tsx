@@ -60,7 +60,7 @@ export default function ContactFormSection({
             </div>
           </div>
 
-          <div className="lg:w-1/3 mb-8 lg:mb-0 order-first lg:order-none">
+          <div className="lg:w-1/3 mb-8 lg:mb-0 order-first items-end lg:order-none">
             <Image
               src={isPurple ? woman : woman2}
               alt="Woman consultant"
@@ -77,7 +77,7 @@ export default function ContactFormSection({
                 placeholder="Имя"
                 className={`${
                   isPurple ? "bg-white text-black" : "bg-white"
-                } rounded-xl`}
+                } rounded-[12px] border-none h-[61px] px-5`}
               />
               <div className="relative">
                 <Input
@@ -85,7 +85,7 @@ export default function ContactFormSection({
                   placeholder="+7 (999) 999-99-99"
                   className={`${
                     isPurple ? "bg-white text-black" : "bg-white"
-                  } rounded-xl pl-12`}
+                  } rounded-[12px] border-none h-[61px] px-5 pl-12`}
                 />
                 <Image
                   src={rusphone}
@@ -99,7 +99,7 @@ export default function ContactFormSection({
                 placeholder="Ваш вопрос"
                 className={`${
                   isPurple ? "bg-white text-black" : "bg-white"
-                } rounded-xl`}
+                } rounded-[12px] border-none p-5`}
                 rows={4}
               />
               <Button
